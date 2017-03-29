@@ -4,7 +4,7 @@ Donate link: https://www.paypal.me/jmwarnerltd
 Tags: social icons, brands, icons, shortcode, svg, social icon, social media, social networking, social profile, retina display, behance, bitbucket, dribbble, facebook, github, google plus, google+, instagram, linkedin, pinterest, soundcloud, tumblr, twitter, vimeo, youtube
 Requires at least: 4.6
 Tested up to: 4.7.3
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,13 +26,9 @@ The plugin currently serves the following channels: Behance, Bitbucket, Dribbble
 The *Customise* section features various options, including:
 
 * Background colours are available as either branded, transparent or custom (the latter features a colour picker for selecting a specific HEX value).
-
 * Shapes (that is, the shape that each icon sits within) can either be square, circle or square with rounded corners.
-
 * Size can either be small (30 x 30 px), medium (40 x 40 px) or large (50 x 50 px).
-
 * Alignment can be set to either center, left or right.
-
 * Spacing places a certain amount of space either side of each icon and can be set to either Extra Small (5 px), Small (10 px), Medium (15 px), Large (20 px) or Extra Large (25 px).
 
 = Display =
@@ -87,3 +83,9 @@ README updates.
 
 = 1.0.4 =
 Added donation link.
+
+= 1.0.5 =
+A few tweaks:
+
+* Fixed text domain for strings
+* Updated required WP version so as not to require load_plugin_textdomain()
