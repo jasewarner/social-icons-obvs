@@ -4,11 +4,11 @@ Donate link: https://www.paypal.me/jmwarnerltd
 Tags: social icons, brands, icons, shortcode, svg, social icon, social media, social networking, social profile, retina display, behance, bitbucket, dribbble, facebook, github, google plus, google+, instagram, linkedin, pinterest, soundcloud, tumblr, twitter, vimeo, youtube
 Requires at least: 4.6
 Tested up to: 4.7.3
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin allows WordPress site admins to direct users to their various social media accounts, using customisable SVG icons.
+Add fully customisable SVG social icons to your website. Icon customisation includes colour, shape, size, alignment and spacing.
 
 == Description ==
 
@@ -111,3 +111,6 @@ Support for more languages will be coming soon!
 
 = 1.0.7 =
 Minor tweaks.
+
+= 1.0.8 =
+Updated plugin description.
