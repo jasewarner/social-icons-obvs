@@ -4,7 +4,7 @@ Donate link: https://www.paypal.me/jmwarnerltd
 Tags: social icons, brands, icons, shortcode, svg, social icon, social media, social networking, social profile, retina display, behance, bitbucket, dribbble, facebook, github, google plus, google+, instagram, linkedin, pinterest, soundcloud, tumblr, twitter, vimeo, youtube
 Requires at least: 4.6
 Tested up to: 4.7.3
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -89,3 +89,22 @@ A few tweaks:
 
 * Fixed text domain for strings
 * Updated required WP version so as not to require load_plugin_textdomain()
+
+= 1.0.6 =
+Added support for the following languages:
+
+* Arabic
+* Dutch
+* English (GB)
+* English (US)
+* French
+* German
+* Hindi
+* Italian
+* Japanese
+* Mandarin
+* Portuguese
+* Russian
+* Spanish
+
+Support for more languages will be coming soon!
