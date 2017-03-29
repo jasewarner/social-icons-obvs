@@ -13,9 +13,9 @@
 ?>
 
 <div class="sio--preview-container">
-	<h3 class="sio--heading"><?php _e( 'Preview', $this->plugin_name ); ?></h3>
-	<p><?php _e( 'This is how the icons will look across your website.', $this->plugin_name ); ?>
-		<br><?php _e( 'Don’t forget to save your changes.', $this->plugin_name ); ?></p>
+	<h3 class="sio--heading"><?php _e( 'Preview', 'social-icons-obvs' ); ?></h3>
+	<p><?php _e( 'This is how the icons will look across your website.', 'social-icons-obvs' ); ?>
+		<br><?php _e( 'Don’t forget to save your changes.', 'social-icons-obvs' ); ?></p>
 	<div class="sio--preview">
 		<ul class="sio--preview-icons"></ul>
 	</div>

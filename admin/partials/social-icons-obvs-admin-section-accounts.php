@@ -12,5 +12,5 @@
 
 ?>
 
-<p><?php _e( 'Switch on an account to activate it. You may then enter the link to your profile.', $this->plugin_name ); ?>
-	<br><?php _e( 'If you no longer wish to display an account, simply switch it off.', $this->plugin_name ); ?></p>
+<p><?php _e( 'Switch on an account to activate it. You may then enter the link to your profile.', 'social-icons-obvs' ); ?>
+	<br><?php _e( 'If you no longer wish to display an account, simply switch it off.', 'social-icons-obvs' ); ?></p>

@@ -12,5 +12,5 @@
 
 ?>
 
-<p><?php _e( 'Use the styling tools to adjust the appearance of the icons.', $this->plugin_name ); ?>
-	<br><?php _e( 'You can preview your changes before saving them.', $this->plugin_name ); ?></p>
+<p><?php _e( 'Use the styling tools to adjust the appearance of the icons.', 'social-icons-obvs' ); ?>
+	<br><?php _e( 'You can preview your changes before saving them.', 'social-icons-obvs' ); ?></p>
