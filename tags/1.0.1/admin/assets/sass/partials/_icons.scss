@@ -1,0 +1,222 @@
+.sio--icon {
+  display: block;
+
+  &:before {
+    content: '';
+    display: block;
+    height: inherit;
+    width: inherit;
+  }
+
+  &-behance {
+
+    &.sio--icon-bg-brand {
+      background-color: $brand-behance-color;
+    }
+
+    &:before {
+      background-image: url('../image/sio-icon-behance.svg');
+    }
+
+  }
+
+  &-bitbucket {
+
+    &.sio--icon-bg-brand {
+      background-color: $brand-bitbucket-color;
+    }
+
+    &:before {
+      background-image: url('../image/sio-icon-bitbucket.svg');
+    }
+
+  }
+
+  &-dribbble {
+
+    &.sio--icon-bg-brand {
+      background-color: $brand-dribbble-color;
+    }
+
+    &:before {
+      background-image: url('../image/sio-icon-dribbble.svg');
+    }
+
+  }
+
+  &-facebook {
+
+    &.sio--icon-bg-brand {
+      background-color: $brand-facebook-color;
+    }
+
+    &:before {
+      background-image: url('../image/sio-icon-facebook.svg');
+    }
+
+  }
+
+  &-github {
+
+    &.sio--icon-bg-brand {
+      background-color: $brand-github-color;
+    }
+
+    &:before {
+      background-image: url('../image/sio-icon-github.svg');
+    }
+
+  }
+
+  &-google {
+
+    &.sio--icon-bg-brand {
+      background-color: $brand-google-color;
+    }
+
+    &:before {
+      background-image: url('../image/sio-icon-google.svg');
+    }
+
+  }
+
+  &-instagram {
+
+    &.sio--icon-bg-brand {
+      background-color: $brand-instagram-color;
+    }
+
+    &:before {
+      background-image: url('../image/sio-icon-instagram.svg');
+    }
+
+  }
+
+  &-linkedin {
+
+    &.sio--icon-bg-brand {
+      background-color: $brand-linkedin-color;
+    }
+
+    &:before {
+      background-image: url('../image/sio-icon-linkedin.svg');
+    }
+
+  }
+
+  &-pinterest {
+
+    &.sio--icon-bg-brand {
+      background-color: $brand-pinterest-color;
+    }
+
+    &:before {
+      background-image: url('../image/sio-icon-pinterest.svg');
+    }
+
+  }
+
+  &-soundcloud {
+
+    &.sio--icon-bg-brand {
+      background-color: $brand-soundcloud-color;
+    }
+
+    &:before {
+      background-image: url('../image/sio-icon-soundcloud.svg');
+    }
+
+  }
+
+  &-tumblr {
+
+    &.sio--icon-bg-brand {
+      background-color: $brand-tumblr-color;
+    }
+
+    &:before {
+      background-image: url('../image/sio-icon-tumblr.svg');
+    }
+
+  }
+
+  &-twitter {
+
+    &.sio--icon-bg-brand {
+      background-color: $brand-twitter-color;
+    }
+
+    &:before {
+      background-image: url('../image/sio-icon-twitter.svg');
+    }
+
+  }
+
+  &-vimeo {
+
+    &.sio--icon-bg-brand {
+      background-color: $brand-vimeo-color;
+    }
+
+    &:before {
+      background-image: url('../image/sio-icon-vimeo.svg');
+    }
+
+  }
+
+  &-youtube {
+
+    &.sio--icon-bg-brand {
+      background-color: $brand-youtube-color;
+    }
+
+    &:before {
+      background-image: url('../image/sio-icon-youtube.svg');
+    }
+
+  }
+
+}
+
+// When called upon, the following override the above styles.
+.sio--icon {
+
+  // Background colour.
+  &-bg-transparent {
+    background-color: transparent;
+  }
+
+  &-bg-custom {
+    background-color: $wp-grey-dark-color;
+  }
+
+  // Shape.
+  &-shape-rounded {
+    border-radius: $sio-border-radius;
+  }
+
+  &-shape-square {
+    border-radius: 0;
+  }
+
+  &-shape-circle {
+    border-radius: 100%;
+  }
+
+  // Size.
+  &-size-sm {
+    height: $sio-icon-sizing-sm;
+    width: $sio-icon-sizing-sm;
+  }
+
+  &-size-md {
+    height: $sio-icon-sizing-md;
+    width: $sio-icon-sizing-md;
+  }
+
+  &-size-lg {
+    height: $sio-icon-sizing-lg;
+    width: $sio-icon-sizing-lg;
+  }
+
+}
