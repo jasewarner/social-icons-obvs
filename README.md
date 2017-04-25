@@ -1,7 +1,6 @@
 # Social Icons Obvs
 
-Add fully customisable SVG social icons to your WordPress website.
-Icon customisation includes colour, shape, size, alignment and spacing.
+Add fully customisable SVG social icons to your WordPress website. Icon customisation includes colour, shape, size, alignment and spacing.
 
 ## Author
 
