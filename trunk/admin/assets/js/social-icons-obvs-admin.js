@@ -182,19 +182,6 @@
 
         }
 
-        /**
-         * Hide the settings page loader just before content appears.
-         *
-         * @since       1.0.0
-         */
-        function hideSettingsLoader() {
-
-            var $loader = $( '.sio--loader' );
-
-            $loader.fadeOut( transitionSpeed );
-
-        }
-
         function getCustomColour() {
 
             if ( $iconCustomBackground.val().length <= 0 && $paletteReplacer.length > 0 ) {
@@ -668,15 +655,6 @@
         iconPreview();
         hiddenTableRows();
         iconSorting();
-
-        /**
-         * Hide settings loader.
-         *
-         * @since       1.0.0
-         */
-        setTimeout( function () {
-            hideSettingsLoader();
-        }, 200 );
 
         /**
          * Show settings after slight delay.

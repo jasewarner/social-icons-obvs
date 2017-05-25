@@ -60,4 +60,3 @@
 
 	</form>
 </div>
-<div class="sio--loader"></div>

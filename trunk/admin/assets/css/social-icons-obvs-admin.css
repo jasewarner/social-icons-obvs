@@ -258,21 +258,7 @@
     display: none; }
 
 .sio--wrap {
-  display: none;
   padding-right: 20px; }
-
-.sio--loader {
-  background: url("../image/sio-loader.svg") no-repeat center;
-  display: block;
-  height: 90px;
-  left: 50%;
-  margin-left: 80px;
-  margin-top: 16px;
-  position: fixed;
-  top: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  width: 90px; }
 
 .sio--heading-icon {
   display: block;
