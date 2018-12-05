@@ -1,4 +1,4 @@
-.sio--wrap {
+.sio-wrap {
 
   table {
     border-radius: $sio-border-radius;
@@ -6,11 +6,11 @@
     margin-top: $sio-spacing-lg / 2;
 
     tbody > tr {
-      background-color: $sio-white-color;
+      background-color: $sio-color-white;
     }
 
     tbody > tr:nth-of-type(odd) {
-      background-color: $sio-grey-light-color;
+      background-color: $sio-color-grey-light;
     }
 
     tbody > tr:first-of-type {

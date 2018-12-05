@@ -1,91 +1,94 @@
-.sio {
+.sio-wrap {
+  padding-right: 20px;
+}
 
-  &--wrap {
-    padding-right: 20px;
+.sio-heading-icon {
+  display: block;
+  line-height: $sio-icon-sizing-sm;
+  margin-left: $sio-icon-sizing-sm;
+  padding-left: $sio-icon-sizing-sm / 2;
+  position: relative;
+  transition: $sio-transition;
+
+  &.disabled {
+    opacity: 0.3;
   }
 
-  &--heading-icon {
-    display: block;
-    line-height: $sio-icon-sizing-sm;
-    margin-left: $sio-icon-sizing-sm;
-    padding-left: $sio-icon-sizing-sm / 2;
-    position: relative;
-    transition: $sio-transition;
-
-    &.disabled {
-      opacity: 0.3;
-    }
-
-    .sio--icon {
-      left: -$sio-icon-sizing-sm;
-      position: absolute;
-      top: 0;
-    }
-
+  .sio-icon {
+    height: $sio-icon-sizing-sm;
+    left: -$sio-icon-sizing-sm;
+    position: absolute;
+    top: 0;
+    width: $sio-icon-sizing-sm;
   }
+}
 
-  &--preview {
-    background: url('../image/sio-preview-background.png') top left repeat;
-    background-size: 20px 20px;
-    border-radius: $sio-border-radius;
-    box-shadow: 0 2px 2px lighten( $sio-border-color, 75 );
-    box-sizing: border-box;
-    margin-top: $sio-spacing-lg / 2;
-    padding: $sio-spacing-lg;
-  }
+.sio-preview {
+  background: url('../image/sio-preview-background.png') top left repeat;
+  background-size: 20px 20px;
+  border-radius: $sio-border-radius;
+  box-shadow: 0 2px 2px lighten( $sio-color-border, 75 );
+  box-sizing: border-box;
+  margin-top: $sio-spacing-lg / 2;
+  padding: $sio-spacing-lg;
 
-  &--preview-icons {
+  &__icons {
     @extend %clearfix;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     font-size: 0;
     list-style: none;
     margin: 0;
     padding: 0;
 
-    &.sio--icon-align-center {
-      text-align: center;
+    &--center {
+      justify-content: center;
     }
 
-    &.sio--icon-align-left {
-      text-align: left;
+    &--left {
+      justify-content: flex-start;
     }
 
-    &.sio--icon-align-right {
-      text-align: right;
+    &--right {
+      justify-content: flex-end;
     }
 
     li {
       display: inline-block;
       margin: 0;
-      vertical-align: bottom;
 
-      &.sio--icon-spacing-xs {
+      &.sio-icon--space-xs {
         padding: $sio-icon-spacing-lg $sio-icon-spacing-xs;
       }
 
-      &.sio--icon-spacing-sm {
+      &.sio-icon--space-sm {
         padding: $sio-icon-spacing-lg $sio-icon-spacing-sm;
       }
 
-      &.sio--icon-spacing-md {
+      &.sio-icon--space-md {
         padding: $sio-icon-spacing-lg $sio-icon-spacing-md;
       }
 
-      &.sio--icon-spacing-lg {
+      &.sio-icon--space-lg {
         padding: $sio-icon-spacing-lg $sio-icon-spacing-lg;
       }
 
-      &.sio--icon-spacing-xl {
+      &.sio-icon--space-xl {
         padding: $sio-icon-spacing-lg $sio-icon-spacing-xl;
       }
 
     }
 
   }
+}
 
-  &--sort-icons {
+.sio-sort {
+
+  &__icons {
 
     li {
-      background-color: $sio-white-color;
+      background-color: $sio-color-white;
       cursor: pointer;
       display: block;
       margin: 0;
@@ -93,7 +96,7 @@
       position: relative;
       text-align: center;
 
-      &:before {
+      &::before {
         @include background-image('sio-icon-sort');
         @include opacity(0.25);
         background-size: 100% 100%;
@@ -109,7 +112,7 @@
       }
 
       &:nth-of-type(odd) {
-        background-color: $sio-grey-light-color;
+        background-color: $sio-color-grey-light;
       }
 
       & > span {
@@ -117,39 +120,36 @@
         vertical-align: bottom;
       }
 
-      &:hover:before {
+      &:hover::before {
         @include opacity(0.5);
       }
 
     }
-
   }
+}
 
-  &--preview-icons,
-  &--sort-icons {
-
-    li.sio--empty {
-      background: $wp-red-error-color;
+.sio-preview, .sio-sort {
+  &__icons {
+    li.sio-empty {
+      background: $wp-color-red-error;
       border-radius: $wp-border-radius;
       box-shadow: $wp-box-shadow;
       box-sizing: border-box;
-      color: $sio-white-color;
+      color: $sio-color-white;
       font-size: 14px;
       margin: $sio-spacing-lg;
       padding: $sio-spacing-xs $sio-spacing-sm;
       width: calc( 100% - 6em );
 
-      &:before {
+      &::before {
         display: none;
       }
 
     }
-
   }
-
 }
 
-// WP saved notification override (styles only fired on plugin settings page, so no slapped wrists!).
+// WP saved notification override (styles only fired on plugin settings page, so no slapped wrists!)
 .wp-core-ui .notice.is-dismissible {
   margin-left: 0;
   margin-top: 20px;

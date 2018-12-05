@@ -4,10 +4,10 @@ Add fully customisable SVG social icons to your WordPress website. Icon customis
 
 ## Author
 
-Jase Warner ( <a href="https://jase.io/">https://jase.io</a> )
+Jase Warner ( [https://jase.io](https://jase.io/) )
 
 ## Synopsis
-
+ 
 Social Icons Obvs offers the ability to add social media icons to a WordPress site with extensive customising options, such as icon background colour, shape, size, spacing and alignment.
 
 The plugin settings page consists of three sections: Accounts, Customise and Display.
@@ -36,4 +36,4 @@ Once the changes have been saved, place the shortcode `[social_icons_obvs]` wher
 
 ## Installation
 
-Head over to the <a href="https://wordpress.org/plugins/social-icons-obvs/">WordPress Plugin Directory page</a> to download the plugin and follow the instructions there.
+Head over to the [WordPress Plugin Directory page](https://wordpress.org/plugins/social-icons-obvs/) to download the plugin and follow the instructions there.

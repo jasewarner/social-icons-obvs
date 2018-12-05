@@ -10,10 +10,10 @@
          */
 
             // Icon vars.
-        var $iconPreviewList = $( '.sio--preview-icons' ),
-            $iconSortingList = $( '.sio--sort-icons' ),
-            $checkbox = $( '.sio--switch input[type="checkbox"]' ),
-            $icon = 0;
+        var $iconPreviewList = $( '.sio-preview__icons' ),
+            $iconSortingList = $( '.sio-sort__icons' ),
+            $checkbox = $( '.sio-switch input[type="checkbox"]' ),
+            $icon;
 
         // Icon field vars.
         var $iconAlignment = $( '#alignment' ),
@@ -25,7 +25,7 @@
 
         // Other vars.
         var $colourPicker = $( '#sio-colour-picker' ),
-            $paletteReplacer = $( '.sio--spectrum' ),
+            $paletteReplacer = $( '.sio-spectrum' ),
             customColour = '',
             transitionSpeed = 400,
             emptyMessage = 'Oops. It looks like you have not activated any accounts yet.';
@@ -36,7 +36,7 @@
          * @since       1.0.0
          */
         setTimeout( function () {
-            $icon = $( '.sio--icon-editable' );
+            $icon = $( '.sio-icon-editable' );
         }, 400 );
 
         /**
@@ -61,9 +61,9 @@
          */
         function settingsTabs() {
 
-            var $tabContainer = $( '.sio--tabs' );
+            var $tabContainer = $( '.sio-tabs' );
             var $tabHeading = $tabContainer.find( 'li' ),
-                $tabContent = $( '.sio--tab-content' ),
+                $tabContent = $( '.sio-tab-content' ),
                 activeClass = 'current';
 
             $tabHeading.on( 'click', function () {
@@ -90,17 +90,17 @@
             $tabHeading.removeClass( activeClass );
             $tabContent.removeClass( activeClass );
 
-            if ( '#accounts' == hash ) {
+            if ( '#accounts' === hash ) {
 
                 $tabContainer.find( '[data-tab="tab-1"]' ).addClass( activeClass );
                 $tabContent1.addClass( activeClass );
 
-            } else if ( '#customise' == hash ) {
+            } else if ( '#customise' === hash ) {
 
                 $tabContainer.find( '[data-tab="tab-2"]' ).addClass( activeClass );
                 $tabContent2.addClass( activeClass );
 
-            } else if ( '#display' == hash ) {
+            } else if ( '#display' === hash ) {
 
                 $tabContainer.find( '[data-tab="tab-3"]' ).addClass( activeClass );
                 $tabContent3.addClass( activeClass );
@@ -136,7 +136,7 @@
                     $field.parent().removeClass( 'disabled' );
 
                     // Remove 'disabled' class from title and icon.
-                    $field.parents( 'td' ).prev().find( '.sio--heading-icon' ).removeClass( 'disabled' );
+                    $field.parents( 'td' ).prev().find( '.sio-heading-icon' ).removeClass( 'disabled' );
 
                     // Get to end of text in input when focusing.
                     var inputLength = $field.val().length * 2;
@@ -155,7 +155,7 @@
                     $field.parent().addClass( 'disabled' );
 
                     // Add 'disabled' class to title and icon.
-                    $field.parents( 'td' ).prev().find( '.sio--heading-icon' ).addClass( 'disabled' );
+                    $field.parents( 'td' ).prev().find( '.sio-heading-icon' ).addClass( 'disabled' );
 
                 }
 
@@ -176,7 +176,7 @@
          */
         function showSettingsWrap() {
 
-            var $wrap = $( '.sio--wrap' );
+            var $wrap = $( '.sio-wrap' );
 
             $wrap.fadeIn( transitionSpeed );
 
@@ -208,20 +208,20 @@
                 color : customColour,
                 flat : false,
                 showInput : true,
-                className : 'sio--spectrum',
+                className : 'sio-spectrum',
                 showInitial : true,
                 showPalette : true,
                 showSelectionPalette : true,
                 maxSelectionSize : 10,
                 preferredFormat : 'hex',
                 localStorageKey : 'sio.colour.picker',
-                containerClassName : 'sio--colour-picker',
+                containerClassName : 'sio-colour-picker',
                 hideAfterPaletteSelect : true,
                 showButtons : false,
                 move : function ( color ) {
 
                     // Get colour picker value and apply to icon background.
-                    if ( $( '.sio--icon-bg-custom' ).length > 0 ) {
+                    if ( $( '.sio-icon--custom' ).length > 0 ) {
 
                         var colour = $colourPicker.spectrum( 'get' );
                         colour = colour.toHexString();
@@ -240,7 +240,7 @@
                 change : function ( color ) {
 
                     // Get colour picker value and apply to icon background.
-                    if ( $( '.sio--icon-bg-custom' ).length > 0 ) {
+                    if ( $( '.sio-icon--custom' ).length > 0 ) {
 
                         var colour = $colourPicker.spectrum( 'get' );
                         colour = colour.toHexString();
@@ -294,14 +294,11 @@
 
                         var id = $( this ).attr( 'id' );
 
-                        $iconPreviewList.addClass( 'sio--icon-align-' + alignmentVal );
-                        $iconPreviewList.append( '<li class="sio--icon-spacing-' + spacingVal + '"><span class="sio--icon sio--icon-editable sio--icon-' + id + ' sio--icon-bg-' + backgroundVal + ' sio--icon-shape-' + shapeVal + ' sio--icon-size-' + sizeVal + '"></span></li>' );
+                        $iconPreviewList.addClass( 'sio-preview__icons--' + alignmentVal );
+                        $iconPreviewList.append( '<li class="sio-icon--' + spacingVal + '"><span class="sio-icon sio-icon-editable sio-icon--' + id + ' sio-icon--' + backgroundVal + ' sio-icon--' + shapeVal + ' sio-icon--' + sizeVal + '"></span></li>' );
 
-                        if ( backgroundVal == 'custom' ) {
-
-
-                            $( '.sio--icon-editable' ).css( 'background-color', customColour );
-
+                        if ( backgroundVal === 'custom' ) {
+                            $( '.sio-icon-editable' ).css( 'background-color', customColour );
                         }
 
                     }
@@ -309,9 +306,7 @@
                 } );
 
                 if ( $iconPreviewList.is( ':empty' ) ) {
-
-                    $iconPreviewList.append( '<li class="sio--empty">' + emptyMessage + '</li>' );
-
+                    $iconPreviewList.append( '<li class="sio-empty">' + emptyMessage + '</li>' );
                 }
 
             }
@@ -322,10 +317,10 @@
                 var value = $iconAlignment.val();
 
                 $iconPreviewList.removeClass( function ( index, className ) {
-                    return (className.match( /(^|\s)sio--icon-align-\S+/g ) || []).join( ' ' );
+                    return (className.match( /(^|\s)sio-preview__icons--\S+/g ) || []).join( ' ' );
                 } );
 
-                $iconPreviewList.addClass( 'sio--icon-align-' + value );
+                $iconPreviewList.addClass( 'sio-preview__icons--' + value );
 
             }
 
@@ -333,12 +328,12 @@
             function iconBackgroundCustomisation() {
 
                 var value = $iconBackground.val();
-                $icon = $( '.sio--icon-editable' );
+                $icon = $( '.sio-icon-editable' );
 
                 // Update icons.
                 $.each( $icon, function () {
 
-                    if ( $( this ).hasClass( 'sio--icon-bg-custom' ) ) {
+                    if ( $( this ).hasClass( 'sio-icon--custom' ) ) {
 
                         $( this ).removeAttr( 'style' );
 
@@ -346,21 +341,21 @@
 
                     $( this ).removeClass( function ( index, className ) {
 
-                        return (className.match( /(^|\s)sio--icon-bg-\S+/g ) || []).join( ' ' );
+                        return (className.match( /(^|\s)sio-icon--bg-\S+/g ) || []).join( ' ' );
 
                     } );
 
-                    $( this ).addClass( 'sio--icon-bg-' + value );
+                    $( this ).addClass( 'sio-icon--bg-' + value );
 
                 } );
 
-                if ( value != 'custom' ) {
+                if ( value !== 'custom' ) {
 
-                    $( '.sio--spectrum' ).hide();
+                    $( '.sio-spectrum' ).hide();
 
                 } else {
 
-                    $( '.sio--spectrum' ).show();
+                    $( '.sio-spectrum' ).show();
 
                 }
 
@@ -370,15 +365,15 @@
             function iconShapeCustomisation() {
 
                 var value = $iconShape.val();
-                $icon = $( '.sio--icon-editable' );
+                $icon = $( '.sio-icon-editable' );
 
                 $.each( $icon, function () {
 
                     $( this ).removeClass( function ( index, className ) {
-                        return (className.match( /(^|\s)sio--icon-shape-\S+/g ) || []).join( ' ' );
+                        return (className.match( /(^|\s)sio-icon--shape-\S+/g ) || []).join( ' ' );
                     } );
 
-                    $( this ).addClass( 'sio--icon-shape-' + value );
+                    $( this ).addClass( 'sio-icon--shape-' + value );
 
                 } );
 
@@ -388,15 +383,15 @@
             function iconSizeCustomisation() {
 
                 var value = $iconSize.val();
-                $icon = $( '.sio--icon-editable' );
+                $icon = $( '.sio-icon-editable' );
 
                 $.each( $icon, function () {
 
                     $( this ).removeClass( function ( index, className ) {
-                        return (className.match( /(^|\s)sio--icon-size-\S+/g ) || []).join( ' ' );
+                        return (className.match( /(^|\s)sio-icon--size-\S+/g ) || []).join( ' ' );
                     } );
 
-                    $( this ).addClass( 'sio--icon-size-' + value );
+                    $( this ).addClass( 'sio-icon--size-' + value );
 
                 } );
 
@@ -406,15 +401,15 @@
             function iconSpacingCustomisation() {
 
                 var value = $iconSpacing.val();
-                $icon = $( '.sio--icon-editable' );
+                $icon = $( '.sio-icon-editable' );
 
                 $.each( $icon, function () {
 
                     $( this ).parent().removeClass( function ( index, className ) {
-                        return (className.match( /(^|\s)sio--icon-spacing-\S+/g ) || []).join( ' ' );
+                        return (className.match( /(^|\s)sio-icon--space-\S+/g ) || []).join( ' ' );
                     } );
 
-                    $( this ).parent().addClass( 'sio--icon-spacing-' + value );
+                    $( this ).parent().addClass( 'sio-icon--space-' + value );
 
                 } );
 
@@ -423,7 +418,7 @@
             function checkColourPickerValue() {
 
                 var backgroundValue = $iconBackground.val();
-                $icon = $( '.sio--icon-editable' );
+                $icon = $( '.sio-icon-editable' );
 
                 // Check whether to show colour picker or not.
                 if ( backgroundValue === 'custom' ) {
@@ -442,7 +437,7 @@
 
                     }
 
-                } else if ( backgroundValue != 'custom' ) {
+                } else if ( backgroundValue !== 'custom' ) {
 
                     $paletteReplacer.hide();
 
@@ -495,7 +490,7 @@
          */
         function iconSorting() {
 
-            var $posInput = $( 'input.sio--pos-input' );
+            var $posInput = $( 'input.sio-pos-input' );
 
             // Customised values.
             var background = $iconBackground.val();
@@ -503,7 +498,7 @@
             var size = $iconSize.val();
             var customBackground = '';
 
-            if ( background == 'custom' ) {
+            if ( background === 'custom' ) {
 
                 customBackground = ' style="background-color: ' + customColour + '"';
 
@@ -529,7 +524,7 @@
                 if ( !$iconPreviewList.is( ':empty' ) ) {
 
                     $iconSortingList.empty();
-                    $iconSortingList.append( '<li class="sio--empty">' + emptyMessage + '</li>' );
+                    $iconSortingList.append( '<li class="sio-empty">' + emptyMessage + '</li>' );
 
                 }
 
@@ -543,7 +538,7 @@
                     if ( $( 'input#' + id + '[type="checkbox"]' ).is( ':checked' ) ) {
 
                         // Remove empty message from sorting list.
-                        $iconSortingList.find( $( '.sio--empty' ).remove() );
+                        $iconSortingList.find( $( '.sio-empty' ).remove() );
 
                         // Add default value to input.
                         if ( !$( this ).val() ) {
@@ -576,7 +571,7 @@
                 for ( var i = 0; i < icons.length; i++ ) {
 
                     var id = icons[ i ].name;
-                    var markup = '<li id="sort-icon-' + id + '"><span class="sio--icon sio--icon-editable sio--icon-' + id + ' sio--icon-shape-' + shape + ' sio--icon-size-' + size + ' sio--icon-bg-' + background + '"' + customBackground + '"></span></li>';
+                    var markup = '<li id="sort-icon-' + id + '"><span class="sio-icon sio-icon-editable sio-icon--' + id + ' sio-icon--shape-' + shape + ' sio-icon--size-' + size + ' sio-icon--bg-' + background + '"' + customBackground + '"></span></li>';
 
                     $iconSortingList.append( markup );
 

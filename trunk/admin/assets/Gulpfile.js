@@ -1,17 +1,20 @@
-var autoprefixer = require('gulp-autoprefixer'),
-    cleancss = require('gulp-clean-css'),
-    concat = require('gulp-concat'),
-    gulp = require('gulp'),
-    rename = require('gulp-rename'),
-    sass = require('gulp-sass'),
-    uglify = require('gulp-uglify');
+'use strict';
 
-// Styles.
-gulp.task('styles', function () {
+const gulp = require('gulp');
+const babel = require('gulp-babel');
+const autoprefixer = require('gulp-autoprefixer');
+const cleancss = require('gulp-clean-css');
+const concat = require('gulp-concat');
+const rename = require('gulp-rename');
+const sass = require('gulp-sass');
+const uglify = require('gulp-uglify');
+
+// styles
+gulp.task('css', function () {
     gulp.src('sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
-            browsers: ['last 3 versions'],
+            browsers: ['last 3 versions', '> 5%', 'Explorer >= 10', 'Safari >= 8'],
             cascade: false
         }))
         .pipe(gulp.dest('./css/'))
@@ -20,12 +23,15 @@ gulp.task('styles', function () {
         .pipe(gulp.dest('./css/'));
 });
 
-// Scripts.
+// scripts
 var jsFiles = 'js/functions/*.js',
     jsDest = 'js/';
 
-gulp.task('scripts', function() {
+gulp.task('js', function() {
     return gulp.src(jsFiles)
+        .pipe(babel({
+            presets : ['es2015']
+        }))
         .pipe(concat('social-icons-obvs-admin.js'))
         .pipe(gulp.dest(jsDest))
         .pipe(rename('social-icons-obvs-admin.min.js'))
@@ -33,8 +39,8 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest(jsDest));
 });
 
-// Watch.
+// watch
 gulp.task('watch', function () {
-    gulp.watch('sass/**/*.scss', ['styles']);
-    gulp.watch('js/**/*.js', ['scripts']);
+    gulp.watch('sass/**/*.scss', ['css']);
+    gulp.watch('js/**/*.js', ['js']);
 });

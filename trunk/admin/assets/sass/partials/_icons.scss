@@ -1,234 +1,205 @@
-.sio--icon {
+.sio-icon {
   display: block;
 
-  &:before {
+  &::before {
     content: '';
     display: block;
     height: inherit;
     width: inherit;
   }
 
-  &-behance {
+  // social styles
+  
+  &--behance {
 
-    &.sio--icon-bg-brand {
-      background-color: $brand-behance-color;
+    &.sio-icon--brand {
+      background-color: $brand-color-behance;
     }
 
-    &:before {
+    &::before {
       background-image: url('../image/sio-icon-behance.svg');
     }
-
   }
 
-  &-bitbucket {
+  &--bitbucket {
 
-    &.sio--icon-bg-brand {
-      background-color: $brand-bitbucket-color;
+    &.sio-icon--brand {
+      background-color: $brand-color-bitbucket;
     }
 
-    &:before {
+    &::before {
       background-image: url('../image/sio-icon-bitbucket.svg');
     }
-
   }
 
-  &-dribbble {
+  &--dribbble {
 
-    &.sio--icon-bg-brand {
-      background-color: $brand-dribbble-color;
+    &.sio-icon--brand {
+      background-color: $brand-color-dribbble;
     }
 
-    &:before {
+    &::before {
       background-image: url('../image/sio-icon-dribbble.svg');
     }
-
   }
 
-  &-facebook {
+  &--facebook {
 
-    &.sio--icon-bg-brand {
-      background-color: $brand-facebook-color;
+    &.sio-icon--brand {
+      background-color: $brand-color-facebook;
     }
 
-    &:before {
+    &::before {
       background-image: url('../image/sio-icon-facebook.svg');
     }
-
   }
 
-  &-github {
+  &--github {
 
-    &.sio--icon-bg-brand {
-      background-color: $brand-github-color;
+    &.sio-icon--brand {
+      background-color: $brand-color-github;
     }
 
-    &:before {
+    &::before {
       background-image: url('../image/sio-icon-github.svg');
     }
-
   }
 
-  &-google {
+  &--instagram {
 
-    &.sio--icon-bg-brand {
-      background-color: $brand-google-color;
+    &.sio-icon--brand {
+      background-color: $brand-color-instagram;
     }
 
-    &:before {
-      background-image: url('../image/sio-icon-google.svg');
-    }
-
-  }
-
-  &-instagram {
-
-    &.sio--icon-bg-brand {
-      background-color: $brand-instagram-color;
-    }
-
-    &:before {
+    &::before {
       background-image: url('../image/sio-icon-instagram.svg');
     }
-
   }
 
-  &-linkedin {
+  &--linkedin {
 
-    &.sio--icon-bg-brand {
-      background-color: $brand-linkedin-color;
+    &.sio-icon--brand {
+      background-color: $brand-color-linkedin;
     }
 
-    &:before {
+    &::before {
       background-image: url('../image/sio-icon-linkedin.svg');
     }
-
   }
 
-  &-pinterest {
+  &--pinterest {
 
-    &.sio--icon-bg-brand {
-      background-color: $brand-pinterest-color;
+    &.sio-icon--brand {
+      background-color: $brand-color-pinterest;
     }
 
-    &:before {
+    &::before {
       background-image: url('../image/sio-icon-pinterest.svg');
     }
-
   }
 
-  &-soundcloud {
+  &--soundcloud {
 
-    &.sio--icon-bg-brand {
-      background-color: $brand-soundcloud-color;
+    &.sio-icon--brand {
+      background-color: $brand-color-soundcloud;
     }
 
-    &:before {
+    &::before {
       background-image: url('../image/sio-icon-soundcloud.svg');
     }
-
   }
 
-  &-tumblr {
+  &--tumblr {
 
-    &.sio--icon-bg-brand {
-      background-color: $brand-tumblr-color;
+    &.sio-icon--brand {
+      background-color: $brand-color-tumblr;
     }
 
-    &:before {
+    &::before {
       background-image: url('../image/sio-icon-tumblr.svg');
     }
-
   }
 
-  &-twitter {
+  &--twitter {
 
-    &.sio--icon-bg-brand {
-      background-color: $brand-twitter-color;
+    &.sio-icon--brand {
+      background-color: $brand-color-twitter;
     }
 
-    &:before {
+    &::before {
       background-image: url('../image/sio-icon-twitter.svg');
     }
-
   }
 
-  &-vimeo {
+  &--vimeo {
 
-    &.sio--icon-bg-brand {
-      background-color: $brand-vimeo-color;
+    &.sio-icon--brand {
+      background-color: $brand-color-vimeo;
     }
 
-    &:before {
+    &::before {
       background-image: url('../image/sio-icon-vimeo.svg');
     }
-
   }
 
-  &-youtube {
+  &--youtube {
 
-    &.sio--icon-bg-brand {
-      background-color: $brand-youtube-color;
+    &.sio-icon--brand {
+      background-color: $brand-color-youtube;
     }
 
-    &:before {
+    &::before {
       background-image: url('../image/sio-icon-youtube.svg');
     }
-
   }
 
-  &-yunojuno {
+  &--yunojuno {
 
-    &.sio--icon-bg-brand {
-      background-color: $brand-yunojuno-color;
+    &.sio-icon--brand {
+      background-color: $brand-color-yunojuno;
     }
 
-    &:before {
+    &::before {
       background-image: url('../image/sio-icon-yunojuno.svg');
     }
-
   }
 
-}
-
-// When called upon, the following override the above styles.
-.sio--icon {
-
-  // Background colour.
-  &-bg-transparent {
-    background-color: transparent;
+  // background colour
+  &--bg-transparent {
+    background-color: transparent !important;
   }
 
-  &-bg-custom {
-    background-color: $wp-grey-dark-color;
+  &--bg-custom {
+    background-color: $wp-color-grey-dark;
   }
-
-  // Shape.
-  &-shape-rounded {
+  
+  // shape
+  &--shape-rounded {
     border-radius: $sio-border-radius;
   }
 
-  &-shape-square {
+  &--shape-square {
     border-radius: 0;
   }
 
-  &-shape-circle {
-    border-radius: 100%;
+  &--shape-circle {
+    border-radius: 50%;
   }
 
-  // Size.
-  &-size-sm {
+  // size
+  &--size-sm {
     height: $sio-icon-sizing-sm;
     width: $sio-icon-sizing-sm;
   }
 
-  &-size-md {
+  &--size-md {
     height: $sio-icon-sizing-md;
     width: $sio-icon-sizing-md;
   }
 
-  &-size-lg {
+  &--size-lg {
     height: $sio-icon-sizing-lg;
     width: $sio-icon-sizing-lg;
   }
-
+  
 }

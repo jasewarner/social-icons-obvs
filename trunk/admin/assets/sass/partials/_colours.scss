@@ -1,60 +1,69 @@
+// ---------------------------------
+// misc
+
+$sio-color-border:              rgba(0, 0, 0, 0.25);
+$sio-color-grey-light:          #f9f9f9;
+$sio-color-white:               #ffffff;
+
+// ---------------------------------
+// brand colours
+
+$brand-color-behance:           #1769ff;
+$brand-color-bitbucket:         #205081;
+$brand-color-dribbble:          #ea4c89;
+$brand-color-facebook:          #3b5998;
+$brand-color-github:            #333333;
+$brand-color-instagram:         #e1306c;
+$brand-color-linkedin:          #0077b5;
+$brand-color-pinterest:         #bd081c;
+$brand-color-soundcloud:        #ff3300;
+$brand-color-tumblr:            #35465c;
+$brand-color-twitter:           #1da1f2;
+$brand-color-vimeo:             #1ab7ea;
+$brand-color-youtube:           #cd201f;
+$brand-color-yunojuno:          #47d7ac;
+
 /**
- * Social Icons Obvs colours.
+ * WordPress colours
  */
 
-// Misc.
-$sio-border-color:              rgba(0, 0, 0, 0.25);
-$sio-grey-light-color:          #f9f9f9;
-$sio-white-color:               #ffffff;
+// ---------------------------------
+// blues
 
-// Brand colours.
-$brand-behance-color:           #1769ff;
-$brand-bitbucket-color:         #205081;
-$brand-dribbble-color:          #ea4c89;
-$brand-facebook-color:          #3b5998;
-$brand-github-color:            #333333;
-$brand-google-color:            #dd4b39;
-$brand-instagram-color:         #e1306c;
-$brand-linkedin-color:          #0077b5;
-$brand-pinterest-color:         #bd081c;
-$brand-soundcloud-color:        #ff3300;
-$brand-tumblr-color:            #35465c;
-$brand-twitter-color:           #1da1f2;
-$brand-vimeo-color:             #1ab7ea;
-$brand-youtube-color:           #cd201f;
-$brand-yunojuno-color:          #47d7ac;
+$wp-color-blue-primary:         #0087be;
+$wp-color-blue-light:           #78dcfa;
+$wp-color-blue-medium:          #00aadc;
+$wp-color-blue-dark:            #005082;
 
-/**
- * WordPress colours.
- */
+// ---------------------------------
+// greys
 
-// Blues.
-$wp-blue-primary-color:         #0087be;
-$wp-blue-light-color:           #78dcfa;
-$wp-blue-medium-color:          #00aadc;
-$wp-blue-dark-color:            #005082;
+$wp-color-grey-primary:         #87a6bc;
+$wp-color-grey-dark:            #2e4453;
+$wp-color-grey-dark-darken-10:  darken( $wp-color-grey-primary, 10);
+$wp-color-grey-dark-darken-20:  darken( $wp-color-grey-primary, 20);
+$wp-color-grey-dark-darken-30:  darken( $wp-color-grey-primary, 30);
+$wp-color-grey-light:           #f3f6f8;
+$wp-color-grey-lighten-10:      lighten( $wp-color-grey-primary, 10);
+$wp-color-grey-lighten-20:      lighten( $wp-color-grey-primary, 20);
+$wp-color-grey-lighten-30:      lighten( $wp-color-grey-primary, 30);
 
-// Greys.
-$wp-grey-primary-color:         #87a6bc;
-$wp-grey-dark-color:            #2e4453;
-$wp-grey-dark-darken-10-color:  darken( $wp-grey-primary-color, 10);
-$wp-grey-dark-darken-20-color:  darken( $wp-grey-primary-color, 20);
-$wp-grey-dark-darken-30-color:  darken( $wp-grey-primary-color, 30);
-$wp-grey-light-color:           #f3f6f8;
-$wp-grey-lighten-10-color:      lighten( $wp-grey-primary-color, 10);
-$wp-grey-lighten-20-color:      lighten( $wp-grey-primary-color, 20);
-$wp-grey-lighten-30-color:      lighten( $wp-grey-primary-color, 30);
+// ---------------------------------
+// oranges
 
-// Oranges.
-$wp-orange-fire-color:          #d54e21;
-$wp-orange-jazzy-color:         #f0821e;
+$wp-color-orange-fire:          #d54e21;
+$wp-color-orange-jazzy:         #f0821e;
 
-// Validations and alerts.
-$wp-green-valid-color:          #4ab866;
-$wp-yellow-warning-color:       #f0b849;
-$wp-red-error-color:            #d94f4f;
+// ---------------------------------
+// validations and alerts
 
-// Misc.
-$wp-body-color:                 #f1f1f1;
-$wp-field-border-color:         #DDDDDD;
-$wp-field-select-color:         $wp-grey-dark-color;
+$wp-color-green-valid:          #4ab866;
+$wp-color-yellow-warning:       #f0b849;
+$wp-color-red-error:            #d94f4f;
+
+// ---------------------------------
+// misc
+
+$wp-color-body:                 #f1f1f1;
+$wp-color-field-border:         #DDDDDD;
+$wp-color-field-select:         $wp-color-grey-dark;
