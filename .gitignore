@@ -1,6 +1,7 @@
-# System files.
+# system files
 .DS_Store
 .idea
 
-# Folders.
+# gulp files and directories
 node_modules/
+*/**/package-lock.json
