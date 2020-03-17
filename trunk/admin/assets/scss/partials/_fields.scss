@@ -1,0 +1,131 @@
+.sio-switch {
+  display: inline-block;
+  height: 24px;
+  position: relative;
+  width: 40px;
+
+  &:hover .sio-slider {
+    background-color: $wp-color-grey-dark-darken-30;
+  }
+
+  input {
+    display: none;
+  }
+
+  input:checked + .sio-slider {
+    background-color: $wp-color-green-valid;
+  }
+
+  input:focus + .sio-slider {
+    box-shadow: 0 0 1px $wp-color-green-valid;
+  }
+
+  input:checked + .sio-slider::before {
+    transform: translateX(16px);
+  }
+}
+
+.sio-slider {
+  background-color: $wp-color-grey-primary;
+  border-radius: 24px;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: $sio-transition;
+
+  &::before {
+    background-color: $color-white;
+    border-radius: 50%;
+    bottom: 4px;
+    content: '';
+    height: 16px;
+    left: 4px;
+    position: absolute;
+    transition: $sio-transition;
+    width: 16px;
+  }
+}
+
+.sio-field-group {
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+.sio-account-url {
+  padding-left: 20px;
+  transition: $sio-transition;
+  width: calc(100% - 60px);
+
+  span {
+    @include font-size(12px);
+    color: $wp-color-grey-dark;
+    display: block;
+    margin-bottom: calculate-rem(3px);
+  }
+
+  &.disabled {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.sio-input {
+  border-radius: $sio-border-radius;
+  padding: 6px;
+  width: 50%;
+}
+
+.sio-spectrum {
+  background-color: $sio-color-white;
+  border: 1px solid $wp-color-field-border;
+  border-radius: $wp-border-radius;
+  box-shadow: $wp-box-shadow;
+  color: $wp-color-field-select;
+  padding: 4px;
+  transition: border $sio-transition ease-in-out;
+
+  &:hover,
+  &.sp-active {
+    border-color: $sio-color-border;
+    color: $wp-color-field-select;
+  }
+
+  .sp-preview {
+    border: 1px solid $wp-color-field-border;
+    height: 16px;
+  }
+
+  .sp-dd {
+    font-size: 8px;
+    height: 18px;
+    line-height: 18px;
+    padding: 0;
+  }
+}
+
+.sio-colour-picker {
+  background-color: $sio-color-white;
+  border: 0;
+  border-bottom-left-radius: $sio-border-radius;
+  border-bottom-right-radius: $sio-border-radius;
+  border-top-right-radius: $sio-border-radius;
+  box-shadow: $sio-border-shadow;
+  display: none;
+  font: inherit;
+
+  .sp-picker-container {
+    border: 0;
+  }
+
+  button,
+  input,
+  .sp-color,
+  .sp-hue,
+  .sp-clear {
+    font: inherit;
+  }
+}

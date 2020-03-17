@@ -1,0 +1,34 @@
+// Event wrapper.
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+// Contexts.
+@mixin when-inside($selector) {
+  #{$selector} & {
+    @content;
+  }
+}
+
+// Font size.
+@function calculate-rem($size) {
+  $rem-size: $size / 16px;
+  @return $rem-size * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: calculate-rem($size);
+}

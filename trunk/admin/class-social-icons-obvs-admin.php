@@ -327,7 +327,7 @@ class Social_Icons_Obvs_Admin {
 			array(
 				'checkbox_id' 	    => 'behance',
 				'text_id'           => 'behance_url',
-				'text_label'        => 'Url:',
+				'text_label'        => 'URL:',
 				'text_type'         => 'url',
 				'text_placeholder'  => 'e.g. https://www.behance.net/your-name',
 				'text_value'        => 'https://www.behance.net/',
@@ -343,7 +343,7 @@ class Social_Icons_Obvs_Admin {
 			array(
 				'checkbox_id' 	    => 'bitbucket',
 				'text_id'           => 'bitbucket_url',
-				'text_label'        => 'Url:',
+				'text_label'        => 'URL:',
 				'text_type'         => 'url',
 				'text_placeholder'  => 'e.g. https://bitbucket.org/your-name',
 				'text_value'        => 'https://bitbucket.org/',
@@ -359,7 +359,7 @@ class Social_Icons_Obvs_Admin {
 			array(
 				'checkbox_id' 	    => 'dribbble',
 				'text_id'           => 'dribbble_url',
-				'text_label'        => 'Url:',
+				'text_label'        => 'URL:',
 				'text_type'         => 'url',
 				'text_placeholder'  => 'e.g. https://www.dribbble.com/your-name',
 				'text_value'        => 'https://www.dribbble.com/',
@@ -375,7 +375,7 @@ class Social_Icons_Obvs_Admin {
 			array(
 				'checkbox_id' 	    => 'facebook',
 				'text_id'           => 'facebook_url',
-				'text_label'        => 'Url:',
+				'text_label'        => 'URL:',
 				'text_type'         => 'url',
 				'text_placeholder'  => 'e.g. https://www.facebook.com/your-name',
 				'text_value'        => 'https://www.facebook.com/',
@@ -391,7 +391,7 @@ class Social_Icons_Obvs_Admin {
 			array(
 				'checkbox_id' 	    => 'github',
 				'text_id'           => 'github_url',
-				'text_label'        => 'Url:',
+				'text_label'        => 'URL:',
 				'text_type'         => 'url',
 				'text_placeholder'  => 'e.g. https://github.com/your-name',
 				'text_value'        => 'https://github.com/',
@@ -407,7 +407,7 @@ class Social_Icons_Obvs_Admin {
 			array(
 				'checkbox_id' 	    => 'instagram',
 				'text_id'           => 'instagram_url',
-				'text_label'        => 'Url:',
+				'text_label'        => 'URL:',
 				'text_type'         => 'url',
 				'text_placeholder'  => 'e.g. https://instagram.com/your-name',
 				'text_value'        => 'https://instagram.com/',
@@ -423,7 +423,7 @@ class Social_Icons_Obvs_Admin {
 			array(
 				'checkbox_id' 	    => 'linkedin',
 				'text_id'           => 'linkedin_url',
-				'text_label'        => 'Url:',
+				'text_label'        => 'URL:',
 				'text_type'         => 'url',
 				'text_placeholder'  => 'e.g. https://linkedin.com/in/your-name',
 				'text_value'        => 'https://linkedin.com/',
@@ -439,7 +439,7 @@ class Social_Icons_Obvs_Admin {
 			array(
 				'checkbox_id' 	    => 'pinterest',
 				'text_id'           => 'pinterest_url',
-				'text_label'        => 'Url:',
+				'text_label'        => 'URL:',
 				'text_type'         => 'url',
 				'text_placeholder'  => 'e.g. https://pinterest.com/your-name',
 				'text_value'        => 'https://pinterest.com/',
@@ -455,7 +455,7 @@ class Social_Icons_Obvs_Admin {
 			array(
 				'checkbox_id' 	    => 'soundcloud',
 				'text_id'           => 'soundcloud_url',
-				'text_label'        => 'Url:',
+				'text_label'        => 'URL:',
 				'text_type'         => 'url',
 				'text_placeholder'  => 'e.g. https://soundcloud.com/your-name',
 				'text_value'        => 'https://soundcloud.com/',
@@ -471,7 +471,7 @@ class Social_Icons_Obvs_Admin {
 			array(
 				'checkbox_id' 	    => 'tumblr',
 				'text_id'           => 'tumblr_url',
-				'text_label'        => 'Url:',
+				'text_label'        => 'URL:',
 				'text_type'         => 'url',
 				'text_placeholder'  => 'e.g. https://your-name.tumblr.com',
 				'text_value'        => 'https://',
@@ -487,7 +487,7 @@ class Social_Icons_Obvs_Admin {
 			array(
 				'checkbox_id' 	    => 'twitter',
 				'text_id'           => 'twitter_url',
-				'text_label'        => 'Url:',
+				'text_label'        => 'URL:',
 				'text_type'         => 'url',
 				'text_placeholder'  => 'e.g. https://twitter.com/your-name',
 				'text_value'        => 'https://twitter.com/',
@@ -503,10 +503,26 @@ class Social_Icons_Obvs_Admin {
 			array(
 				'checkbox_id' 	    => 'vimeo',
 				'text_id'           => 'vimeo_url',
-				'text_label'        => 'Url:',
+				'text_label'        => 'URL:',
 				'text_type'         => 'url',
 				'text_placeholder'  => 'e.g. https://vimeo.com/your-name',
 				'text_value'        => 'https://vimeo.com/',
+			)
+		);
+
+		add_settings_field(
+			'whatsapp',
+			'<span class="sio-heading-icon"><span class="sio-icon sio-icon--whatsapp sio-icon--brand sio-icon--rounded sio-icon--sm"></span>WhatsApp</span>',
+			array( $this, 'field_checkbox_text' ),
+			$this->plugin_name . '-accounts',
+			$this->plugin_name . '-accounts',
+			array(
+				'checkbox_id' 	    => 'whatsapp',
+				'text_id'           => 'whatsapp_url',
+				'text_label'        => 'Phone number (international format):',
+				'text_type'         => 'tel',
+				'text_placeholder'  => 'e.g. +447712345678',
+				'text_value'        => '',
 			)
 		);
 
@@ -519,7 +535,7 @@ class Social_Icons_Obvs_Admin {
 			array(
 				'checkbox_id' 	    => 'youtube',
 				'text_id'           => 'youtube_url',
-				'text_label'        => 'Url:',
+				'text_label'        => 'URL:',
 				'text_type'         => 'url',
 				'text_placeholder'  => 'e.g. https://youtube.com/user/your-name',
 				'text_value'        => 'https://youtube.com/',
@@ -535,7 +551,7 @@ class Social_Icons_Obvs_Admin {
 			array(
 				'checkbox_id' 	    => 'yunojuno',
 				'text_id'           => 'yunojuno_url',
-				'text_label'        => 'Url:',
+				'text_label'        => 'URL:',
 				'text_type'         => 'url',
 				'text_placeholder'  => 'e.g. https://yunojuno.com/user/your-name',
 				'text_value'        => 'https://uk.yunojuno.com/p/',
@@ -850,6 +866,19 @@ class Social_Icons_Obvs_Admin {
 			array(
 				'class'     => 'sio-pos-input',
 				'id'        => 'vimeo_pos',
+				'type'      => 'hidden',
+			)
+		);
+
+		add_settings_field(
+			'whatsapp_pos',
+			'whatsapp',
+			array( $this, 'field_text' ),
+			$this->plugin_name . '-display',
+			$this->plugin_name . '-display',
+			array(
+				'class'     => 'sio-pos-input',
+				'id'        => 'whatsapp_pos',
 				'type'      => 'hidden',
 			)
 		);

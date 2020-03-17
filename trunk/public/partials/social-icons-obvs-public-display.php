@@ -25,6 +25,7 @@ $accounts = array(
 	'tumblr',
 	'twitter',
 	'vimeo',
+	'whatsapp',
 	'youtube',
 	'yunojuno',
 );
@@ -82,10 +83,16 @@ if ( ! empty( $active_accounts ) ) {
         <ul class="sio-icons__list sio-icons__list--<?php echo esc_attr( $alignment ); ?> sio-icons__list--<?php echo esc_attr( $background ); ?> sio-icons__list--<?php echo esc_attr( $shape ); ?> sio-icons__list--<?php echo esc_attr( $size ); ?>">
 			<?php
 			foreach ( $active_accounts as $icon ) {
+
+				$url = $icon['url'];
+
+				if ( 'whatsapp' === $icon['name'] ) {
+					$url = 'https://api.whatsapp.com/send?phone=' . $url;
+				}
 				?>
                 <li class="sio-icons__list-item sio-icons__list-item--<?php echo esc_attr( $spacing ); ?>">
                     <a class="sio-icons__icon sio-icons__icon--<?php echo esc_attr( $icon['name'] ); ?>"
-                       href="<?php echo esc_url( $icon['url'] ); ?>"
+                       href="<?php echo esc_url( $url ); ?>"
                        title="<?php echo esc_attr( $icon['name'] ); ?>" <?php echo $icon_style; ?>></a>
                 </li>
 				<?php
