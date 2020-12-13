@@ -3,8 +3,8 @@ Contributors: jasewarner
 Donate link: https://www.paypal.me/jmwarnerltd
 Tags: social icons, brands, icons, shortcode, svg, social icon, social media, social networking, social profile, retina display, behance, bitbucket, dribbble, facebook, github, instagram, linkedin, pinterest, soundcloud, tumblr, twitter, vimeo, youtube, yunojuno
 Requires at least: 4.6
-Tested up to: 5.5
-Stable tag: 1.1.6
+Tested up to: 5.6
+Stable tag: 1.1.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -68,6 +68,9 @@ This plugin uses SVG icons so that, among other benefits, their appearance does 
 3. This is a screen shot of the *Display* section.
 
 == Changelog ==
+
+= 1.1.7 =
+Image path fixes
 
 = 1.1.6 =
 Corrected tested WP version

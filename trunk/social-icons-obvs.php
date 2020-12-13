@@ -16,7 +16,7 @@
  * Plugin Name:       Social Icons Obvs
  * Plugin URI:        http://jase.io/archive/development/social-icons-obvs/
  * Description:       Direct users to your various social accounts using customisable SVG icons.
- * Version:           1.1.6
+ * Version:           1.1.8
  * Author:            Jase Warner
  * Author URI:        https://jase.io/
  * License:           GPL-2.0+
